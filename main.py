@@ -82,6 +82,12 @@ def signup():
 def dashboard():
     return render_template("dashboard.html")
 
+@app.route("/logout")
+@login_required
+def logout():
+    return render_template("index.html")
+
+
 if __name__ == "__main__":
 
     with app.app_context():
